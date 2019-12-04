@@ -1,0 +1,22 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.row{
+  display: flex;
+  height: 350px;
+  justify-content: center;
+  padding: 0 10% 0 10%;
+  flex-wrap: wrap;
+}
+
+div {
+  border: solid Black 1px;
+  display: flex;
+  width: 33.3%;
+  font-size: 4em;
+  justify-content: center;
+  margin: 10px;
+  padding-top: 32px;
+}
