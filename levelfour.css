@@ -1,0 +1,18 @@
+section {
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
