@@ -60,8 +60,19 @@ var cardType = {
   "Leopard"
   "Flamingo"
 }
-//create a class on the divs to target
-let tarDiv = document.body.getElementByClassName("");
+
+/* document.body.onload = addElement;
+
+function addElement () {
+  let newDiv = document.createElement("div");
+  newDiv.createElement(addElement);
+  let section = document.getElementByTagName("section");
+  section.appendChild(newDiv);
+}; */
+
+//div  target
+let section = document.getElementByTagName("SECTION");
+let tarDiv = section.getElementById("card");
 //random generator for cards
 let range = (start, end) => {
   let array = [];
@@ -70,10 +81,10 @@ let range = (start, end) => {
   }
   return array;
 };
-let grid = (range(1, 61));
+let grid = (range(1, 3));
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-console.log(getRandomInt(grid.length));
-
-card = random(range)
+var num = (getRandomInt(grid.length));
+var text = document.createTextNode(num);
+tarDiv.appendChild(text);
