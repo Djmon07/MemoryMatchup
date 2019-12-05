@@ -3,20 +3,19 @@
   margin: 0;
 }
 
-.row{
+section {
   display: flex;
-  height: 350px;
-  justify-content: center;
-  padding: 0 10% 0 10%;
-  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 div {
-  border: solid Black 1px;
   display: flex;
-  width: 33.3%;
-  font-size: 4em;
+  align-content: space-between;
+  width: 100px;
+  height 100px;
+  background-color: lightblue;
+  font-size: 14px;
   justify-content: center;
-  margin: 10px;
+  margin: 50px;
   padding-top: 32px;
 }
