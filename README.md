@@ -1,1 +1,2 @@
 # MemoryMatchup
+This is our attempt at creating a memory game as a part of our semester final. When it is finished, the code should produce an in-browswer memory game that we've coded from scratch that the utilizes HTML, CSS and JavaScript techniques that we learned this semester. It's a partner effort so we're graded on the efforts to provide the code necessary to meet the baseline of what we need this code to accomplish for a rudimentary game of memory cards.
