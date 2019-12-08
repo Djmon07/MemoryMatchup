@@ -71,3 +71,7 @@ var cardType4 = [
   "Leopard",
   "Flamingo"
 ]
+
+document.querySelector("input").addEventListener("click", event => {
+document.location.reload(true);
+})
