@@ -68,6 +68,11 @@ let cardTypeFour = [
 ]
 var ul = document.querySelector("ul")
 
+function drawGrid (cardType) {
+let cardTypeOne = [
+  "Up",
+  "Down"
+]  let copy = ?
 let cards = cardTypeOne.length * 2;
 for (let x = 1; x <= cards; x++) {
   var crDiv = document.createElement("div");
@@ -77,7 +82,9 @@ for (let x = 1; x <= cards; x++) {
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
-
+}
+ drawGrid;
+  
 let counter = 0;
 window.addEventListener("mousedown", event => {
  if (event.key == "click") {
