@@ -66,22 +66,24 @@ let cardTypeFour = [
   "Leopard",
   "Flamingo"
 ]
-var ul = document.querySelector("ul")
 
-function drawGrid (cardType) {
+
+var ul = document.querySelector("ul");
+function drawGrid (level) {
 //copy of cardType
-let copy = ?
-let cards = cardTypeOne.length * 2;
-for (let x = 1; x <= cards; x++) {
-  var crDiv = document.createElement("div");
-  crDiv.textContent = cardType.splice(Math.floor(Math.random() * cardType.length), 1);
-  ul.appendChild(crDiv);
-}
+  let cards = Array.from(level);
+  for (let x = 0; x < cards.length * 2; x++) {
+    var crDiv = document.createElement("div");
+    crDiv.textContent = cards.splice(Math.floor(Math.random() * cards.length), 1);
+    ul.appendChild(crDiv);
+  }
+};
+drawGrid(cardTypeOne)
+/*
+drawGrid;
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
-}
- drawGrid;
 
 let counter = 0;
 window.addEventListener("mousedown", event => {
@@ -107,4 +109,4 @@ window.addEventListener("mousedown", event => {
     document.body.querySelectorAll('div') = "lightblue";
     counter = 0;
 
-  });
+  }); */
