@@ -1,18 +1,8 @@
-let cardType1 = [
-  "Up",
-  "Down",
+let cardTypeOne = [
   "Up",
   "Down"
 ]
-let cardType2 = [
-  "Red",
-  "Blue",
-  "Green",
-  "Purple",
-  "Yellow",
-  "Orange",
-  "Pink",
-  "Indigo",
+let cardTypeTwo = [
   "Red",
   "Blue",
   "Green",
@@ -22,25 +12,7 @@ let cardType2 = [
   "Pink",
   "Indigo"
 ]
-let cardType3 = [
-  "Carrots",
-  "Blueberries",
-  "Broccoli",
-  "Eggplant",
-  "Corn",
-  "Tomatoes",
-  "Watermelon",
-  "Plum",
-  "Cauliflower",
-  "Grapes",
-  "Strawberries",
-  "Cantaloupe",
-  "Peppers",
-  "Bananas",
-  "Apple",
-  "Peas",
-  "Mushrooms",
-  "Onions",
+let cardTypeThree = [
   "Carrots",
   "Blueberries",
   "Broccoli",
@@ -60,39 +32,7 @@ let cardType3 = [
   "Mushrooms",
   "Onions"
 ]
-let cardType4 = [
-  "Hippo",
-  "Lion",
-  "Tiger",
-  "Panda",
-  "Monkey",
-  "Ostrich",
-  "Wolf",
-  "Zebra",
-  "Elephant",
-  "Fox",
-  "Snake",
-  "Turtle",
-  "Lemur",
-  "Giraffe",
-  "Penguin",
-  "Polar Bear",
-  "Squid",
-  "Cat",
-  "Rabbit",
-  "Goat",
-  "Cow",
-  "Dog",
-  "Pig",
-  "Horse",
-  "Gecko",
-  "Rooster",
-  "Kangaroo",
-  "Ox",
-  "Boar",
-  "Sheep",
-  "Leopard",
-  "Flamingo",
+let cardTypeFour = [
   "Hippo",
   "Lion",
   "Tiger",
@@ -128,7 +68,7 @@ let cardType4 = [
 ]
 var ul = document.querySelector("ul")
 
-let cards = 4;
+let cards = cardTypeOne.length * 2;
 for (let x = 1; x <= cards; x++) {
   var crDiv = document.createElement("div");
   crDiv.textContent = cardType.splice(Math.floor(Math.random() * cardType.length), 1);
