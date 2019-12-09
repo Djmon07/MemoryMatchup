@@ -69,10 +69,8 @@ let cardTypeFour = [
 var ul = document.querySelector("ul")
 
 function drawGrid (cardType) {
-let cardTypeOne = [
-  "Up",
-  "Down"
-]  let copy = ?
+//copy of cardType  
+let copy = ?
 let cards = cardTypeOne.length * 2;
 for (let x = 1; x <= cards; x++) {
   var crDiv = document.createElement("div");
