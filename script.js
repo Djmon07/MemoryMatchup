@@ -1,6 +1,13 @@
-var cardType = [
+function getRandomElement(array) {
+  let randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+}
+
+var cardType1 = [
   "Up",
-  "Down",
+  "Down"
+]
+var cardType2 = [
   "Red",
   "Blue",
   "Green",
@@ -8,7 +15,9 @@ var cardType = [
   "Yellow",
   "Orange",
   "Pink",
-  "Indigo",
+  "Indigo"
+]
+var cardType3 = [
   "Carrots",
   "Blueberries",
   "Broccoli",
@@ -26,7 +35,9 @@ var cardType = [
   "Apple",
   "Peas",
   "Mushrooms",
-  "Onions",
+  "Onions"
+]
+var cardType4 = [
   "Hippo",
   "Lion",
   "Tiger",
@@ -61,11 +72,6 @@ var cardType = [
   "Flamingo"
 ]
 
-var ul = document.querySelector("ul")
-
-let cards = 4;
-for (let x = 1; x <= cards; x++) {
-  var crDiv = document.createElement("div");
-  crDiv.textContent = cardType.splice(Math.floor(Math.random() * cardType.length), 1);
-  ul.appendChild(crDiv);
-}
+document.querySelector("input").addEventListener("click", event => {
+document.location.reload(true);
+})
