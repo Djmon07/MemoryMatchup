@@ -137,6 +137,10 @@ for (let x = 1; x <= cards; x++) {
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
+}
+document.querySelector("input").addEventListener("click", event => {
+document.location.reload(true);
+})
 
 let counter = 0;
 window.addEventListener("mousedown", event => {
