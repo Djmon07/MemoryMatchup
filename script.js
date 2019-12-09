@@ -84,33 +84,33 @@ function drawGrid (level) {
   }
 };
 drawGrid(cardTypeOne)
-/*
+
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
-
 let counter = 0;
 window.addEventListener("mousedown", event => {
- if (event.key == "click") {
-    counter++;
-    document.body.querySelectorAll('div') = "violet";
- }
-  if (counter = 2 && cardType1() == cardType1()) {
-    document.body.querySelectorAll('div') = "grey";
-    counter = 0;
-    event.disabled = "disabled";
-  }
-  if (document.body.querySelectorAll('div') = "grey") {
-    document.body.createTextNode("Congratulations! You Cleared This Level!");
-   document.body.style.color = "green";
-    divs[div].style.fontSize = "xx-large";
-    var duration = 5 seconds;
+  if (event.key == "click") {
+      counter++;
+      document.body.querySelectorAll("div").style.backgroundColor = "violet";
+   }
+   if (counter = 2 && cardType1() == cardType1()) {
+     document.body.querySelectorAll("div").style.backgroundColor = "grey";
+    }
+    if (document.body.querySelectorAll("div").style.backgroundColor = "grey") {
+         document.body.createElement("p");
+         document.querySelector("p").appendChild.createTextNode("Congratulations! You Cleared This Level!");
+         document.body.style.color = "lightgreen";
+         document.body.querySelector("p").style.fontSize = "xx-large";
+         counter = 0;
+         event.disabled = "disabled";
+    var duration = 5seconds;
     //This is where it would move on to the next level//
   }
-  else {
-    document.body.querySelectorAll('div') = "violet";
+    else {
+      document.body.querySelectorAll("div") = "violet";
     var duration = 5 seconds;
-    document.body.querySelectorAll('div') = "lightblue";
-    counter = 0;
-  });
-  */
+      document.body.querySelectorAll("div") = "lightblue";
+       counter = 0;
+     };
+});
