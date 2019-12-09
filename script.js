@@ -12,6 +12,14 @@ var cardType2 = [
   "Yellow",
   "Orange",
   "Pink",
+  "Indigo",
+  "Red",
+  "Blue",
+  "Green",
+  "Purple",
+  "Yellow",
+  "Orange",
+  "Pink",
   "Indigo"
 ]
 var cardType3 = [
