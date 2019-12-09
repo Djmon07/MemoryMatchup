@@ -144,7 +144,7 @@ window.addEventListener("mousedown", event => {
     counter++;
     document.body.querySelectorAll('div') = "violet";
  }
-  if (counter = 2; cardType() != cardType()) {
+  if (counter = 2 && cardType1() !== cardType1()) {
     document.body.querySelectorAll('div') = "grey";
     counter = 0;
     event.disabled = "disabled";
@@ -153,11 +153,11 @@ window.addEventListener("mousedown", event => {
     document.body.createTextNode("Congratulations! You Cleared This Level!");
    document.body.style.color = "green";
     divs[div].style.fontSize = "xx-large";
-    var duration = 5seconds;
+    var duration = 5 seconds;
     //This is where it would move on to the next level//
   }
   else {
-    var duration = 5seconds;
+    var duration = 5 seconds;
     document.body.querySelectorAll('div') = "lightblue";
     counter = 0;
   });
