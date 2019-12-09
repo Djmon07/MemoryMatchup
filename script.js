@@ -1,8 +1,3 @@
-function getRandomElement(array) {
-  let randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
-}
-
 var cardType1 = [
   "Up",
   "Down"
@@ -71,7 +66,14 @@ var cardType4 = [
   "Leopard",
   "Flamingo"
 ]
+var ul = document.querySelector("ul")
 
+let cards = 4;
+for (let x = 1; x <= cards; x++) {
+  var crDiv = document.createElement("div");
+  crDiv.textContent = cardType.splice(Math.floor(Math.random() * cardType.length), 1);
+  ul.appendChild(crDiv);
+}
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
