@@ -72,7 +72,12 @@ var ul = document.querySelector("ul");
 function drawGrid (level) {
 //copy of cardType
   let cards = Array.from(level);
-  for (let x = 0; x < cards.length * 2; x++) {
+  let length = cards.length
+  for (let y = 0; y < length; y++){
+    let x2 = cards[y];
+    cards.push(x2);
+  };
+  for (let x = 0; x < length * 2; x++) {
     var crDiv = document.createElement("div");
     crDiv.textContent = cards.splice(Math.floor(Math.random() * cards.length), 1);
     ul.appendChild(crDiv);
@@ -80,7 +85,6 @@ function drawGrid (level) {
 };
 drawGrid(cardTypeOne)
 /*
-drawGrid;
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
@@ -108,5 +112,5 @@ window.addEventListener("mousedown", event => {
     var duration = 5 seconds;
     document.body.querySelectorAll('div') = "lightblue";
     counter = 0;
-
-  }); */
+  });
+  */
