@@ -84,16 +84,20 @@ function drawGrid (level) {
     ul.appendChild(crDiv);
   }
 };
+
 drawGrid(cardType1);
 
-document.body.addEventListener("click", click = event => {
+document.addEventListener("click", event => {
   if (event.target.nodeName == "DIV"){
     event.target.style.background = "violet";
     event.target.style.color = "black";
   }
 });
-/*
-document.querySelector("input").addEventListener("click", event => {
+
+
+
+
+/* document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
 })
 
@@ -129,4 +133,4 @@ document.body.querySelectorAll("div").addEventListener("mousedown", event => {
 document.querySelector("input").addEventListener("click", event => {
   document.location.reload(true);
   });
-};
+}; */
