@@ -1,8 +1,8 @@
-let cardTypeOne = [
+let cardType1 = [
   "Up",
   "Down"
-]
-let cardTypeTwo = [
+];
+let cardType2 = [
   "Red",
   "Blue",
   "Green",
@@ -11,8 +11,8 @@ let cardTypeTwo = [
   "Orange",
   "Pink",
   "Indigo"
-]
-let cardTypeThree = [
+];
+let cardType3 = [
   "Carrots",
   "Blueberries",
   "Broccoli",
@@ -31,8 +31,8 @@ let cardTypeThree = [
   "Peas",
   "Mushrooms",
   "Onions"
-]
-let cardTypeFour = [
+];
+let cardType4 = [
   "Hippo",
   "Lion",
   "Tiger",
@@ -65,10 +65,11 @@ let cardTypeFour = [
   "Sheep",
   "Leopard",
   "Flamingo"
-]
+];
 
-
+var num = 1;
 var ul = document.querySelector("ul");
+var div = document.querySelectorAll("div");
 function drawGrid (level) {
 //copy of cardType
   let cards = Array.from(level);
@@ -83,7 +84,14 @@ function drawGrid (level) {
     ul.appendChild(crDiv);
   }
 };
-drawGrid(cardTypeOne)
+drawGrid(cardType1);
+
+document.body.addEventListener("click", click = event => {
+  if (event.target.nodeName == "DIV"){
+    event.target.style.background = "violet";
+    event.target.style.color = "black";
+  }
+});
 /*
 document.querySelector("input").addEventListener("click", event => {
 document.location.reload(true);
