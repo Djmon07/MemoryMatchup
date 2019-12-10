@@ -69,7 +69,8 @@ let cardType4 = [
 
 var num = 1;
 var ul = document.querySelector("ul");
-var div = document.querySelectorAll("div");
+var div = document.querySelector("div");
+var divAll = document.querySelectorAll("div");
 function drawGrid (level) {
 //copy of cardType
   let cards = Array.from(level);
@@ -86,14 +87,60 @@ function drawGrid (level) {
 };
 
 drawGrid(cardType1);
-
+let firstDiv = null;
 document.addEventListener("click", event => {
+  if (event.target.nodeName == "DIV") {
+    event.target.style.background = "violet";
+    event.target.style.color = "black";
+
+    if (firstDiv == null) { // first click
+      firstDiv = event.target;
+      console.log(firstDiv.textContent);
+    } else { // second click
+      if (event.target.textContent == firstDiv.textContent) {
+        console.log('we got a match', firstDiv);
+        event.target.style.background  = "grey";
+        firstDiv.style.background  = "grey";
+        // console.log(counter);
+        // console.log(event.target.textContent)
+        // console.log(match)
+      } else {
+        console.log('not a match');
+
+      }
+      firstDiv = null;
+    }
+  }
+});/*
+    if (divAll.backgroundColor = "grey") {
+      let p = document.createElement("p");
+      p.textContent = ("Congratulations! You Cleared This Level!");
+      document.body.appendChild(p);
+      document.body.style.color = "lightgreen";
+      p.style.fontSize = "xx-large";
+      counter = 0;
+  }
+  if (counter = 2 && div != div)
+     div.style.backgroundColor = "violet";
+     let bombTimer = setTimeout(() => {
+     console.log("BOOM!");
+     }, 3000);
+     div.style.backgroundColor = "lightblue";
+     div.style.color = "black";
+     counter = 0;
+   }
+}); */
+
+
+/* let counter = 0;
+document.addEventListener("click", click = event => {
   if (event.target.nodeName == "DIV"){
     event.target.style.background = "violet";
     event.target.style.color = "black";
+    counter ++;
+    console.log(counter)
   }
-});
-
+}); */
 
 
 
