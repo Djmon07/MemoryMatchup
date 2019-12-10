@@ -90,29 +90,34 @@ document.location.reload(true);
 })
 let counter = 0;
 window.addEventListener("mousedown", event => {
- if (event.key == "click") {
-     counter++;
-     document.body.querySelectorAll("div").style.backgroundColor = "violet";
+   if (event.key == "click") {
+      counter++;
+      document.body.querySelectorAll("div").style.backgroundColor = "violet";
    };
-  if (counter = 2 && cardType1() == cardType1()) {
-     document.body.querySelectorAll("div").style.backgroundColor = "grey";
-     event.disabled = "disabled";
+   if (counter = 2 && cardType1() == cardType1()) {
+      document.body.querySelectorAll("div").style.backgroundColor = "grey";
+      event.disabled = "disabled";
    };
    if (document.body.querySelectorAll("div").style.backgroundColor = "grey") {
-     document.body.createElement("p");
-     document.querySelector("p").appendChild.createTextNode("Congratulations! You Cleared This Level!");
-     document.body.style.color = "lightgreen";
-     document.body.querySelector("p").style.fontSize = "xx-large";
-     counter = 0;
-     setTimeout(function, 5000 milliseconds) {
+      document.body.createElement("p");
+      document.querySelector("p").appendChild.createTextNode("Congratulations! You Cleared This Level!");
+      document.body.style.color = "lightgreen";
+      document.body.querySelector("p").style.fontSize = "xx-large";
+      counter = 0;
+      setTimeout(function, 5000 milliseconds) {
       //This is where we would program how it would move on to the next level
-  };
-};
+      };
+    };
    else {
-     counter = 2 && cardType1() !== cardType1());
-     document.body.querySelectorAll("div") = "violet";
-     setTimeout(function, 3000 milliseconds) {
-     document.body.querySelectorAll("div") = "lightblue";
-     counter = 0;
-  };
+      counter = 2 && cardType1() !== cardType1());
+      document.body.querySelectorAll("div") = "violet";
+      setTimeout(function, 3000 milliseconds) {
+      document.body.querySelectorAll("div") = "lightblue";
+      counter = 0;
+   };
 });
+
+document.querySelector("input").addEventListener("click", event => {
+  document.location.reload(true);
+  });
+};
