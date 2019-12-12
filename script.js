@@ -70,6 +70,7 @@ let cardType4 = [
 let deck = [cardType1, cardType2, cardType3, cardType4];
 let deckNum = 0;
 let ul = document.querySelector("ul");
+let count = 0;
 //get all the obj from array and create divs using each twice
 function drawGrid(level) {
   //copy of cardType
@@ -92,7 +93,6 @@ let div = ul.querySelector("div")
 //Click events
 
 const clickHandeler = event => {
-  if (event.target.nodeName == "DIV") {
     event.target.style.background = "violet";
     event.target.style.color = "black";
     console.log(event.target)
@@ -116,22 +116,34 @@ const clickHandeler = event => {
         }, 2000);
       }
     }
-  }
+
 };
 let firstDiv = null;
-document.addEventListener("click", clickHandeler);
-
 let divs = Array.from(divAll);
+let length = divAll.length
+for (let y = 0; y < length; y++) {
+console.log(divs[y])
+divs[y].addEventListener("click", clickHandeler);
+}
+
+
+
+if (divAll.getElementsByClassName = ("clicked")) {
+  console.log("test")
+  console.log(divAll)
+}
+/* let divs = Array.from(divAll);
 let length = divAll.length
 console.log(divs)
 for (let y = 0; y < length; y++) {
-  let test = divAll[y];
-  console.log(test);
-  if (div.getElementsByClassName("clicked")) {
-  document.removeEventListener("click", clickHandeler);
+  let div = divAll[y];
+  console.log(div); */
+/* if div.getElementsByClassName("clicked") {
+    document.removeEventListener("click", clickHandeler);
     console.log("test2");
-  }
-}
+    console.log(div)
+}*/
+
 
 /* var element = ul.getElementsByClassName('clicked');
 element.addEventListener('click', event);*/
