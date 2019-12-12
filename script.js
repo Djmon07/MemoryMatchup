@@ -67,11 +67,10 @@ let cardType4 = [
   "Flamingo"
 ];
 
-var num = 1;
-var ul = document.querySelector("ul");
-var div = document.querySelector("div");
-var divAll = document.querySelectorAll("div");
-
+let deck = [cardType1, cardType2, cardType3, cardType4];
+let deckNum = 0;
+let ul = document.querySelector("ul");
+//get all the obj from array and create divs using each twice
 function drawGrid(level) {
   //copy of cardType
   let cards = Array.from(level);
@@ -83,19 +82,23 @@ function drawGrid(level) {
   for (let x = 0; x < length * 2; x++) {
     var crDiv = document.createElement("div");
     crDiv.textContent = cards.splice(Math.floor(Math.random() * cards.length), 1);
+    crDiv.setAttribute("class", "none");
     ul.appendChild(crDiv);
   }
 };
-drawGrid(cardType1);
+drawGrid(deck[deckNum]);
+let divAll = ul.querySelectorAll("div")
+let div = ul.querySelector("div")
+//Click events
 
-let firstDiv = null;
-let counter = 0;
-document.addEventListener("click", event => {
+const clickHandeler = event => {
   if (event.target.nodeName == "DIV") {
     event.target.style.background = "violet";
     event.target.style.color = "black";
+    console.log(event.target)
     if (firstDiv == null) { // first click
       firstDiv = event.target;
+      event.target.setAttribute("class", "clicked");
     } else { // second click
       if (event.target.textContent == firstDiv.textContent) {
         console.log('we got a match', firstDiv);
@@ -114,47 +117,32 @@ document.addEventListener("click", event => {
       }
     }
   }
-});
+};
+let firstDiv = null;
+document.addEventListener("click", clickHandeler);
 
-//document.removeEventListener("click", event);
-//document.body.removeEventListener("click", click);
+let divs = Array.from(divAll);
+let length = divAll.length
+console.log(divs)
+for (let y = 0; y < length; y++) {
+  let test = divAll[y];
+  console.log(test);
+  if (div.getElementsByClassName("clicked")) {
+  document.removeEventListener("click", clickHandeler);
+    console.log("test2");
+  }
+}
 
+/* var element = ul.getElementsByClassName('clicked');
+element.addEventListener('click', event);*/
 
+//if document.body.ul.div.getElementsByClassName("clicked") {
+//  document.removeEventListener("click", event)
+//};
 
-/* document.querySelector("input").addEventListener("click", event => {
-document.location.reload(true);
-})
-
-let counter = 0;
-document.body.querySelectorAll("div").addEventListener("mousedown", event => {
-   if (event.key == "click") {
-      counter++;
-      document.body.querySelectorAll("div").style.backgroundColor = "violet";
-   };
-   if (counter = 2 && cardType1() == cardType1()) {
-      document.body.querySelectorAll("div").style.backgroundColor = "grey";
-      event.disabled = "disabled";
-   };
-   if (document.body.querySelectorAll("div").style.backgroundColor = "grey") {
-      document.body.createElement("p");
-      document.querySelector("p").appendChild.createTextNode("Congratulations! You Cleared This Level!");
-      document.body.style.color = "lightgreen";
-      document.body.querySelector("p").style.fontSize = "xx-large";
-      counter = 0;
-      setTimeout(function, 5000 milliseconds) {
-      //This is where we would program how it would move on to the next level
-      };
-   }
-   else {
-     counter = 2 && cardType1() !== cardType1();
-     document.body.querySelectorAll("div") = "violet";
-     //setTimeout = (function, 3000 milliseconds) {
-     document.body.querySelectorAll("div") = "lightblue";
-     counter = 0;
-   //};
-  };
-
-document.querySelector("input").addEventListener("click", event => {
-  document.location.reload(true);
-  });
-}; */
+//if div.element.id = "clicked") {
+//console.log("yes");
+//}
+//document.removeEventListener("click", event => {
+//if (event.target.nodeName == "DIV");
+//});
