@@ -71,11 +71,12 @@ var num = 1;
 var ul = document.querySelector("ul");
 var div = document.querySelector("div");
 var divAll = document.querySelectorAll("div");
-function drawGrid (level) {
-//copy of cardType
+
+function drawGrid(level) {
+  //copy of cardType
   let cards = Array.from(level);
   let length = cards.length
-  for (let y = 0; y < length; y++){
+  for (let y = 0; y < length; y++) {
     let x2 = cards[y];
     cards.push(x2);
   };
@@ -85,62 +86,38 @@ function drawGrid (level) {
     ul.appendChild(crDiv);
   }
 };
-
 drawGrid(cardType1);
+
 let firstDiv = null;
+let counter = 0;
 document.addEventListener("click", event => {
   if (event.target.nodeName == "DIV") {
     event.target.style.background = "violet";
     event.target.style.color = "black";
-
     if (firstDiv == null) { // first click
       firstDiv = event.target;
-      console.log(firstDiv.textContent);
     } else { // second click
       if (event.target.textContent == firstDiv.textContent) {
         console.log('we got a match', firstDiv);
-        event.target.style.background  = "grey";
-        firstDiv.style.background  = "grey";
-        // console.log(counter);
-        // console.log(event.target.textContent)
-        // console.log(match)
-      } else {
-        console.log('not a match');
-
+        event.target.style.background = "grey";
+        firstDiv.style.background = "grey";
+        firstDiv = null;
+      } else { //if not a match
+        let timedFlipBack = setTimeout(() => {
+          console.log('not a match');
+          event.target.style.background = "lightblue";
+          event.target.style.color = "transparent";
+          firstDiv.style.background = "lightblue";
+          firstDiv.style.color = "transparent";
+          firstDiv = null;
+        }, 2000);
       }
-      firstDiv = null;
     }
   }
-});/*
-    if (divAll.backgroundColor = "grey") {
-      let p = document.createElement("p");
-      p.textContent = ("Congratulations! You Cleared This Level!");
-      document.body.appendChild(p);
-      document.body.style.color = "lightgreen";
-      p.style.fontSize = "xx-large";
-      counter = 0;
-  }
-  if (counter = 2 && div != div)
-     div.style.backgroundColor = "violet";
-     let bombTimer = setTimeout(() => {
-     console.log("BOOM!");
-     }, 3000);
-     div.style.backgroundColor = "lightblue";
-     div.style.color = "black";
-     counter = 0;
-   }
-}); */
+});
 
-
-/* let counter = 0;
-document.addEventListener("click", click = event => {
-  if (event.target.nodeName == "DIV"){
-    event.target.style.background = "violet";
-    event.target.style.color = "black";
-    counter ++;
-    console.log(counter)
-  }
-}); */
+//document.removeEventListener("click", event);
+//document.body.removeEventListener("click", click);
 
 
 
