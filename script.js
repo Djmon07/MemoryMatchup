@@ -66,16 +66,16 @@ let cardType4 = [
   "Leopard",
   "Flamingo"
 ];
-
-let deck = [cardType1, cardType2, cardType3, cardType4, 5];
-let deckNum = 0;
 let ul = document.querySelector("ul");
+let deck = [cardType1, cardType2, cardType3, cardType4, 5];
+let deckNum = 1;
 let count = 0;
 //get all the obj from array and create divs using each twice
 function drawGrid(level) {
   //copy of cardType
   let cards = Array.from(level);
-  let length = cards.length
+  let length = cards.length;
+  console.log(length);
   for (let y = 0; y < length; y++) {
     let x2 = cards[y];
     cards.push(x2);
@@ -88,10 +88,9 @@ function drawGrid(level) {
 };
 drawGrid(deck[deckNum]);
 let divAll = ul.querySelectorAll("div")
-let div = ul.querySelector("div")
 let divs = Array.from(divAll);
-let length = divAll.length;
-console.log(length)
+let divLength = divAll.length;//all div's length
+console.log(divLength);
 match = 0;
 //Click events
 const clickHandeler = event => {
@@ -103,16 +102,17 @@ const clickHandeler = event => {
   } else { // second click
     if (event.target.textContent == firstDiv.textContent && event.target != firstDiv) {
       firstDiv.style.display = "none";
-      event.target.style.display = "none"
+      event.target.style.display = "none";
       firstDiv = null;
       match ++;
-      console.log(match)
-      if (match == length / 2){
-        deckNum ++;
-        drawGrid(deck[deckNum])
-        if ((drawGrid(deck[deckNum])) == 5) {
-          console.log("win")
-        }
+      console.log(match);
+      if (match == divLength / 2){
+        console.log("win")
+        var crP = document.createElement("p")
+        var newText = document.createTextNode("You won!")
+        crP.appendChild(newText)
+        var currentP = document.getElementById("p")
+        document.body.insetBefore(ul)
       }
     } else { //if not a match
       let timedFlipBack = setTimeout(() => {
@@ -126,6 +126,6 @@ const clickHandeler = event => {
   }
 };
 let firstDiv = null;
-for (let y = 0; y < length; y++) {
+for (let y = 0; y < divLength; y++) {
   divs[y].addEventListener("click", clickHandeler);
 };
